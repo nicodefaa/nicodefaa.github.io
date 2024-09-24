@@ -19,7 +19,7 @@ h1:hover {
 h2,
 h3 {
   font-family: "Poppins", sans-serif;
-  color: rgb(255, 145, 0);
+  color: rgb(0, 0, 0);
   position: absolute;
   top: 25%;
   left: 35%;
@@ -27,7 +27,7 @@ h3 {
 
 p {
   font-family: "Poppins", sans-serif;
-  color: rgb(229, 255, 0);
+  color: rgb(0, 0, 0);
 }
 
 
@@ -84,6 +84,17 @@ body {
     white-space: normal;
     word-wrap: break-word;
   }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    margin-top: 30%;
+  }
+
+  .gallery img {
+    height: auto;
+    max-width: 200px;
+  }
 }
 
 /* tabletti */
@@ -106,6 +117,16 @@ body {
     white-space: normal;
     word-wrap: break-word;
   }
+  .gallery {
+    grid-template-columns: repeat(4, 1fr); /* 4 kolumnia */
+    grid-template-rows: repeat(4, auto);   /* 4 riviä */
+    margin-top: 25%;
+  }
+
+  .gallery img {
+    height: auto;
+    max-width: 200px;
+  }
 }
 
 /* desktop */
@@ -124,6 +145,17 @@ body {
     font-size: 400%;
     left: 20px;
     top: -40px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    margin-top: 10%;
+  }
+
+  .gallery img {
+    height: auto;
+    max-width: 400px;
   }
 }
 
@@ -191,19 +223,6 @@ body {
   top: 15%;
 }
 
-/* elaimet.html 3x3 picture grid settings */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 900px;
-  margin: 0 auto;
-  position: center;
-  margin-top: 25%;
-}
-
 .gallery img {
-  width: 30%;
-  margin-bottom: 5%;
-  transition: transform 0.3s ease;
+  border: 2px solid black;
 }
