@@ -2,20 +2,22 @@ h1 {
   font-family: "Poppins", sans-serif;
   color: rgb(154, 0, 214);
   text-align: center;
-  text-shadow: 1px 1px 0px black, 
-               -1px 1px 0px black,
-               1px -1px 0px black, 
-               -1px -1px 0px black;  /* Thin black shadow around the text */
-  cursor: pointer;                     /* cursor visual change when mouseovering the title */
+  text-shadow: 1px 1px 0px black,
+    -1px 1px 0px black,
+    1px -1px 0px black,
+    -1px -1px 0px black;
   position: absolute;
 }
 
 h1:hover {
-  color: rgb(0, 210, 255);  /* Change title text color when mouseovering */
+  color: rgb(0, 210, 255);
+  cursor: pointer;
+  /* Change title text color and cursor type when mouseovering */
 }
 
 
-h2, h3 {
+h2,
+h3 {
   font-family: "Poppins", sans-serif;
   color: rgb(255, 145, 0);
   position: absolute;
@@ -30,7 +32,8 @@ p {
 
 
 body {
-  background-color: rgb(255, 255, 255);   /* Aina taustaväri, vaikka olisi valkoinen, koska käyttäjällä voi olla oma väriteema, jossa ei näy tekstit */
+  background-color: rgb(255, 255, 255);
+  /* Aina taustaväri, vaikka olisi valkoinen, koska käyttäjällä voi olla oma väriteema, jossa ei näy tekstit */
   text-align: center;
 }
 
@@ -40,23 +43,23 @@ body {
   position: left;
   left: 0%;
   top: 0;
-  
+
 }
 
 .div-button {
-  background-color: #ff00bf;        /* Green background */
+  background-color: #ff00bf;
   font-family: "Poppins", sans-serif;
   font-size: 20px;
   text-align: center;
-  color: rgb(0, 0, 0);             /* White text */
-  padding: 20px 50px;                     /* Padding inside the div */
-  text-align: center;              /* Center the text */
-  border-radius: 2px;               /* Rounded corners */
+  color: rgb(0, 0, 0);
+  padding: 20px 50px;
+  text-align: center;
+  border-radius: 2px;
   border-color: rgb(0, 0, 0);
-  cursor: pointer;                 /* Pointer cursor */
-  margin: 15px 0;                /* Adds 10px space above and below the button */
-  border: solid 2px rgb(0, 0, 0);  /* Dashed border */
-  
+  cursor: pointer;
+  margin: 15px 0;
+  border: solid 2px rgb(0, 0, 0);
+
 }
 
 
@@ -68,8 +71,8 @@ body {
   }
 
   #OravaEtusivu {
-    width: 60%; /* Set the width to 100% of its container */
-    height: auto; /* Maintain aspect ratio */
+    width: 60%;
+    height: auto;
     left: 20%;
   }
 
@@ -78,8 +81,8 @@ body {
     left: 20px;
     top: 0px;
     width: 50%;
-    white-space: normal; /* Allow the text to wrap */
-    word-wrap: break-word; /* Ensure long words break to the next line */
+    white-space: normal;
+    word-wrap: break-word;
   }
 }
 
@@ -88,10 +91,10 @@ body {
   body {
     background-color: rgb(255, 255, 255);
   }
-  
+
   #OravaEtusivu {
-    width: 70%; /* Set the width to 100% of its container */
-    height: auto; /* Maintain aspect ratio */
+    width: 70%;
+    height: auto;
     left: 15%;
   }
 
@@ -100,8 +103,8 @@ body {
     left: 25px;
     top: -10px;
     width: 40%;
-    white-space: normal; /* Allow the text to wrap */
-    word-wrap: break-word; /* Ensure long words break to the next line */
+    white-space: normal;
+    word-wrap: break-word;
   }
 }
 
@@ -112,8 +115,8 @@ body {
   }
 
   #OravaEtusivu {
-    width: 70%; /* Set the width to 100% of its container */
-    height: auto; /* Maintain aspect ratio */
+    width: 70%;
+    height: auto;
     left: 15%;
   }
 
@@ -127,11 +130,11 @@ body {
 .dropdown {
   position: absolute;
   display: inline-block;
-  top: 10px;             /* Position it 10px from the top */
-  right: 10px;           /* Position it 10px from the right */
+  top: 10px;
+  right: 10px;
 }
 
-/* Style the dropdown button */
+/* dropdown button style ("valikko") */
 .dropbtn {
   background-color: #a333ff;
   color: rgb(0, 0, 0);
@@ -140,12 +143,12 @@ body {
   font-family: "Poppins", sans-serif;
   border: 2px solid black;
   cursor: pointer;
-  text-align: center;  /* Centers text within the button */
-  display: inline-block; /* Ensure the button behaves like a block */
+  text-align: center;
+  display: inline-block;
   position: relative;
 }
 
-/* Hide the dropdown content by default */
+/* dropdown content hidden by default */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -186,4 +189,21 @@ body {
   border: 3px solid black;
   position: absolute;
   top: 15%;
+}
+
+/* elaimet.html 3x3 picture grid settings */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+  position: center;
+  margin-top: 25%;
+}
+
+.gallery img {
+  width: 30%;
+  margin-bottom: 5%;
+  transition: transform 0.3s ease;
 }
