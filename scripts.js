@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
         document.body.appendChild(largeImageContainer);
   
-        // Add click event to close the image when clicking anywhere
+        // Add click event to close the image when clicking anywhere on the overlay
         largeImageContainer.addEventListener("click", closeLargeImage);
   
         // Add swipe event listeners
@@ -82,11 +82,10 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   
     // Function to close the large image
-    function closeLargeImage() {
-      if (largeImageContainer) {
-        largeImageContainer.style.display = "none"; // Hide the overlay
-        const largeImage = largeImageContainer.querySelector(".large-image");
-        largeImage.src = ""; // Clear the image source to hide it
+    function closeLargeImage(event) {
+      // Check if the click is on the overlay and not on the image
+      if (event.target.classList.contains("large-image-container")) {
+        largeImageContainer.style.display = "none";
       }
     }
   
@@ -146,3 +145,4 @@ document.addEventListener("DOMContentLoaded", function() {
       openLargeImage(currentImageIndex);
     }
   });
+  
