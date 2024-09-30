@@ -92,14 +92,6 @@ document.addEventListener("DOMContentLoaded", function() {
         largeImageContainer.style.display = "flex";
     }
 
-    // Function to close the large image
-    function closeLargeImage(event) {
-        // Close the large image if clicking on the overlay or large image
-        if (event.target === largeImageContainer || event.target.classList.contains("large-image")) {
-            largeImageContainer.style.display = "none";
-        }
-    }
-
     // Attach event listeners to gallery images
     galleryImages.forEach((image, index) => {
         image.addEventListener("click", () => openLargeImage(index));
