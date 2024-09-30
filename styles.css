@@ -131,26 +131,34 @@ body {
 }
 
 .large-image-container {
-  display: none; /* Hide by default */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+  display: none;
+  /* Hide by default */
+  justify-content: center;
+  /* Center content horizontally */
+  align-items: center;
+  /* Center content vertically */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Dark background */
   z-index: 10000;
 }
 
 .image-description {
-  color: rgb(182, 56, 255); /* Text color */
-  text-align: center; /* Center text */
+  color: rgb(182, 56, 255);
+  /* Text color */
+  text-align: center;
+  /* Center text */
   font-size: 30px;
   font-family: "Poppins", sans-serif;
-  margin-top: 50%; /* Space between image and text */
-  z-index: 10001; /* Ensure it appears above the overlay */
-  
+  margin-top: 50%;
+  /* Space between image and text */
+  z-index: 10001;
+  /* Ensure it appears above the overlay */
+
 }
 
 /* tabletti */
@@ -173,9 +181,12 @@ body {
     white-space: normal;
     word-wrap: break-word;
   }
+
   .gallery {
-    grid-template-columns: repeat(4, 1fr); /* 4 kolumnia */
-    grid-template-rows: repeat(4, auto);   /* 4 riviä */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 kolumnia */
+    grid-template-rows: repeat(4, auto);
+    /* 4 riviä */
     margin-top: 25%;
   }
 
