@@ -63,7 +63,14 @@ document.addEventListener("DOMContentLoaded", function() {
   
         const largeImage = document.createElement("img");
         largeImage.classList.add("large-image");
+  
+        // Create a paragraph for the description
+        const description = document.createElement("p");
+        description.classList.add("image-description");
+  
+        // Append the image and description to the container
         largeImageContainer.appendChild(largeImage);
+        largeImageContainer.appendChild(description);
   
         document.body.appendChild(largeImageContainer);
   
@@ -76,7 +83,11 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   
       const largeImage = largeImageContainer.querySelector(".large-image");
+      const description = largeImageContainer.querySelector(".image-description");
+  
+      // Update the large image and description
       largeImage.src = galleryImages[currentImageIndex].src;
+      description.textContent = galleryImages[currentImageIndex].alt;
   
       largeImageContainer.style.display = "flex";
     }

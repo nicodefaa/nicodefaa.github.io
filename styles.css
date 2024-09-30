@@ -122,6 +122,26 @@ body {
   border: 2px solid black;
 }
 
+.large-image-container {
+  display: none; /* Hide by default */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  z-index: 10000;
+}
+
+.image-description {
+  color: white; /* Text color */
+  text-align: center; /* Center text */
+  margin-top: 10px; /* Space between image and text */
+  z-index: 10001; /* Ensure it appears above the overlay */
+}
+
 /* tabletti */
 @media only screen and (min-width: 499px) and (max-width: 1049px) {
   body {
