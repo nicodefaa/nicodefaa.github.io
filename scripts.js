@@ -43,3 +43,59 @@ document.addEventListener('DOMContentLoaded', () => {
         largeImage.src = ''; // Reset the source of the large image
     });
 });
+
+
+// mobile gallery swiping
+
+const images = document.querySelectorAll('.gallery img');
+let currentIndex = 0; // Tracks the current image index
+let startX = 0; // To record the starting X position of the touch
+
+// Function to show the large image
+function showLargeImage(index) {
+  const overlay = document.getElementById('overlay');
+  const largeImage = document.querySelector('.large-image');
+  largeImage.src = images[index].src;
+  overlay.style.display = 'flex';
+  currentIndex = index; // Update the current image index
+}
+
+// Close the large image when clicking anywhere
+document.getElementById('overlay').addEventListener('click', function () {
+  this.style.display = 'none';
+});
+
+// Swipe event listeners
+document.querySelector('.large-image').addEventListener('touchstart', function (e) {
+  startX = e.touches[0].clientX;
+});
+
+document.querySelector('.large-image').addEventListener('touchend', function (e) {
+  const endX = e.changedTouches[0].clientX;
+  const diffX = startX - endX;
+
+  if (Math.abs(diffX) > 50) { // Sensitivity threshold for swiping
+    if (diffX > 0) {
+      // Swiped left, show next image
+      showNextImage();
+    } else {
+      // Swiped right, show previous image
+      showPreviousImage();
+    }
+  }
+});
+
+function showNextImage() {
+  currentIndex = (currentIndex + 1) % images.length; // Loop back to first image if at the end
+  showLargeImage(currentIndex);
+}
+
+function showPreviousImage() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop back to last image if at the beginning
+  showLargeImage(currentIndex);
+}
+
+// Attach click event listeners to each image in the gallery
+images.forEach((image, index) => {
+  image.addEventListener('click', () => showLargeImage(index));
+});
