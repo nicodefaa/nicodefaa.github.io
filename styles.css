@@ -25,6 +25,14 @@ h3 {
   left: 35%;
 }
 
+h4 {
+  font-family: "Poppins", sans-serif;
+  color: rgb(0, 0, 0);
+  position: fixed;
+  top: 10%;
+  left: 5%;
+}
+
 p {
   font-family: "Poppins", sans-serif;
   color: rgb(0, 0, 0);
@@ -268,7 +276,7 @@ body {
 #OravaEtusivu {
   border: 3px solid black;
   position: absolute;
-  top: 15%;
+  top: 25%;
 }
 
 .gallery img {
