@@ -83,7 +83,11 @@ document.addEventListener("DOMContentLoaded", function() {
   
     // Function to close the large image
     function closeLargeImage() {
-      largeImageContainer.style.display = "none";
+      if (largeImageContainer) {
+        largeImageContainer.style.display = "none"; // Hide the overlay
+        const largeImage = largeImageContainer.querySelector(".large-image");
+        largeImage.src = ""; // Clear the image source to hide it
+      }
     }
   
     // Attach event listeners to gallery images
