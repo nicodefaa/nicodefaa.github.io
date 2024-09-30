@@ -149,3 +149,13 @@ document.addEventListener('DOMContentLoaded', () => {
         openLargeImage(currentImageIndex);
     }
 });
+
+
+// contact form script
+
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // You can add your form submission logic here
+    alert('Kiitos viestistäsi!'); // For demonstration purposes
+});

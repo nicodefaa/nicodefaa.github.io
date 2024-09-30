@@ -45,31 +45,119 @@ body {
   text-align: center;
 }
 
-#NDLogo {
-  height: 25%;
-  width: 25%;
-  position: left;
-  left: 0%;
-  top: 0;
 
+/* dropdown button style ("valikko") */
+.dropbtn {
+  background-color: #a333ff;
+  color: rgb(0, 0, 0);
+  padding: 16px;
+  font-size: 36px;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid black;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  border-radius: 0px;
 }
 
-.div-button {
-  background-color: #ff00bf;
+/* dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fdc0ff;
+  min-width: 158px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border: 1px solid black;
+  top: 92px;
+  right: 0px;
+  border-radius: 0px;
+}
+
+/* Style for the buttons inside the dropdown */
+.dropdown-content button {
+  background-color: #ffd0f1;
+  color: black;
+  padding: 12px 16px;
   font-family: "Poppins", sans-serif;
+  text-align: left;
+  border: 1px solid black;
+  width: 100%;
+  cursor: pointer;
   font-size: 20px;
   text-align: center;
-  color: rgb(0, 0, 0);
-  padding: 20px 50px;
-  text-align: center;
-  border-radius: 2px;
-  border-color: rgb(0, 0, 0);
-  cursor: pointer;
-  margin: 15px 0;
-  border: solid 2px rgb(0, 0, 0);
-
+  border-radius: 0px;
 }
 
+/* Hover effects for buttons */
+.dropdown-content button:hover {
+  background-color: #ff80f9;
+}
+
+/* Show the dropdown content when clicked */
+.show {
+  display: block;
+}
+
+#OravaEtusivu {
+  border: 3px solid black;
+  position: absolute;
+  top: 25%;
+}
+
+.gallery img {
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+#otayhteytta {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  margin-top: 120px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+/* Yhteydenottolomake */
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  margin-top: 40px;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Lähetä-nappi */
+button {
+  background-color: #49b600;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
 
 /* mobiili */
@@ -231,66 +319,4 @@ body {
   display: inline-block;
   top: 10px;
   right: 10px;
-}
-
-/* dropdown button style ("valikko") */
-.dropbtn {
-  background-color: #a333ff;
-  color: rgb(0, 0, 0);
-  padding: 16px;
-  font-size: 36px;
-  font-family: "Poppins", sans-serif;
-  border: 2px solid black;
-  cursor: pointer;
-  text-align: center;
-  display: inline-block;
-  position: relative;
-}
-
-/* dropdown content hidden by default */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #fdc0ff;
-  min-width: 158px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  border: 1px solid black;
-  top: 92px;
-  right: 0px;
-}
-
-/* Style for the buttons inside the dropdown */
-.dropdown-content button {
-  background-color: #ffd0f1;
-  color: black;
-  padding: 12px 16px;
-  font-family: "Poppins", sans-serif;
-  text-align: left;
-  border: 1px solid black;
-  width: 100%;
-  cursor: pointer;
-  font-size: 20px;
-  text-align: center;
-}
-
-/* Hover effects for buttons */
-.dropdown-content button:hover {
-  background-color: #ff80f9;
-}
-
-/* Show the dropdown content when clicked */
-.show {
-  display: block;
-}
-
-#OravaEtusivu {
-  border: 3px solid black;
-  position: absolute;
-  top: 25%;
-}
-
-.gallery img {
-  border: 2px solid black;
-  cursor: pointer;
 }
