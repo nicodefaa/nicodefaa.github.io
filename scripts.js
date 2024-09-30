@@ -47,59 +47,73 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // mobile gallery swiping
 
-document.addEventListener("DOMContentLoaded", function() {
-    const galleryImages = document.querySelectorAll(".gallery img");
-    let currentImageIndex = 0;
-    let largeImageContainer = null;
+function toggleMenu() {
+    document.getElementById("dropdownMenu").classList.toggle("show");
+}
+
+/* Close the menu if the user clicks outside of it */
+window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+            let openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const galleryImages = document.querySelectorAll('.gallery img');
+    const overlay = document.getElementById('overlay');
+    const largeImage = document.getElementById('largeImage');
+    let currentImageIndex = -1; // Initialize to -1
+
+    // Add click event listener to each image
+    galleryImages.forEach((image, index) => {
+        image.addEventListener('click', () => {
+            openLargeImage(index);
+        });
+    });
 
     // Function to open the large image
     function openLargeImage(index) {
         currentImageIndex = index;
-
-        // Create the container for the large image if it doesn't exist
-        if (!largeImageContainer) {
-            largeImageContainer = document.createElement("div");
-            largeImageContainer.classList.add("large-image-container");
-
-            const largeImage = document.createElement("img");
-            largeImage.classList.add("large-image");
-
-            // Create a paragraph for the description
-            const description = document.createElement("p");
-            description.classList.add("image-description");
-
-            // Append the image and description to the container
-            largeImageContainer.appendChild(largeImage);
-            largeImageContainer.appendChild(description);
-
-            document.body.appendChild(largeImageContainer);
-
-            // Add click event to close the image when clicking anywhere on the overlay
-            largeImageContainer.addEventListener("click", closeLargeImage);
-
-            // Add swipe event listeners
-            largeImageContainer.addEventListener("touchstart", handleTouchStart);
-            largeImageContainer.addEventListener("touchmove", handleTouchMove);
-        }
-
-        const largeImage = largeImageContainer.querySelector(".large-image");
-        const description = largeImageContainer.querySelector(".image-description");
-
-        // Update the large image and description
         largeImage.src = galleryImages[currentImageIndex].src;
-        description.innerHTML = galleryImages[currentImageIndex].alt; // Keep this for angle brackets
-
-        largeImageContainer.style.display = "flex";
+        overlay.style.display = 'flex';
+        updateDescription(); // Update description when opening an image
     }
 
-    // Attach event listeners to gallery images
-    galleryImages.forEach((image, index) => {
-        image.addEventListener("click", () => openLargeImage(index));
+    // Hide the overlay when clicked
+    overlay.addEventListener('click', closeLargeImage);
+
+    // Hide the overlay when the large image is clicked
+    largeImage.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevent the click event from bubbling up
+        closeLargeImage();
     });
 
-    // Variables to detect swipe gestures
+    // Function to close the large image
+    function closeLargeImage() {
+        overlay.style.display = 'none';
+        largeImage.src = ''; // Reset the source of the large image
+    }
+
+    // Function to update image description
+    function updateDescription() {
+        const description = document.querySelector('.image-description');
+        if (description) {
+            description.innerHTML = galleryImages[currentImageIndex].alt; // Keep this for angle brackets
+        }
+    }
+
+    // Mobile gallery swiping
     let xDown = null;
     let yDown = null;
+
+    overlay.addEventListener("touchstart", handleTouchStart);
+    overlay.addEventListener("touchmove", handleTouchMove);
 
     // Detect the initial touch position
     function handleTouchStart(evt) {
@@ -118,9 +132,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const yUp = evt.touches[0].clientY;
 
         const xDiff = xDown - xUp;
-        const yDiff = yDown - yUp;
 
-        if (Math.abs(xDiff) > Math.abs(yDiff)) {
+        if (Math.abs(xDiff) > Math.abs(yDown - yUp)) {
             // Swiped horizontally
             if (xDiff > 0) {
                 // Swiped left -> Next image

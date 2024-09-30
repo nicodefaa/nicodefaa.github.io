@@ -116,7 +116,7 @@ body {
   max-height: 90%;
   object-fit: contain;
   position: fixed;
-  top: 5%;
+  top: 10%;
   left: 5%;
   z-index: 10000;
   border: 2px solid black;
@@ -136,10 +136,13 @@ body {
 }
 
 .image-description {
-  color: white; /* Text color */
+  color: rgb(182, 56, 255); /* Text color */
   text-align: center; /* Center text */
-  margin-top: 10px; /* Space between image and text */
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 50%; /* Space between image and text */
   z-index: 10001; /* Ensure it appears above the overlay */
+  
 }
 
 /* tabletti */
