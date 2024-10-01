@@ -31,6 +31,7 @@ h4 {
   position: fixed;
   top: 10%;
   left: 5%;
+  margin-top: 10px;
 }
 
 p {
@@ -212,7 +213,7 @@ button {
   object-fit: contain;
   position: fixed;
   top: 10%;
-  left: 15%;
+  left: 5%;
   z-index: 100;
   border: 2px solid black;
 }
