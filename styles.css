@@ -371,12 +371,12 @@ button {
 }
 
 .large-image {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 80%;
+  max-height: 80%;
   object-fit: contain;
   position: fixed;
-  top: 10%;
-  left: 5%;
+  top: 5%;
+  left: 30%;
   z-index: 100;
   border: 2px solid black;
 }
@@ -400,6 +400,6 @@ button {
   text-align: center;
   font-size: 30px;
   font-family: "Poppins", sans-serif;
-  margin-top: 100px;
+  margin-top: 600px;
   z-index: 1100;
 }
