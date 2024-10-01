@@ -1,3 +1,4 @@
+/* logo/otsikko */
 h1 {
   font-family: "Poppins", sans-serif;
   color: rgb(154, 0, 214);
@@ -12,9 +13,8 @@ h1 {
 h1:hover {
   color: rgb(0, 210, 255);
   cursor: pointer;
-  /* Change title text color and cursor type when mouseovering */
+  /* Change title text color and cursor type when mouseovering (header 1) */
 }
-
 
 h2,
 h3 {
@@ -38,15 +38,13 @@ p {
   color: rgb(0, 0, 0);
 }
 
-
 body {
   background-color: rgb(255, 255, 255);
   /* Aina taustaväri, vaikka olisi valkoinen, koska käyttäjällä voi olla oma väriteema, jossa ei näy tekstit */
   text-align: center;
 }
 
-
-/* dropdown button style ("valikko") */
+/* dropdown button style ("Valikko") */
 .dropbtn {
   background-color: #a333ff;
   color: rgb(0, 0, 0);
@@ -68,7 +66,7 @@ body {
   background-color: #fdc0ff;
   min-width: 158px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 300;
   border: 1px solid black;
   top: 92px;
   right: 0px;
@@ -100,6 +98,7 @@ body {
   display: block;
 }
 
+/* frontpage picture */
 #OravaEtusivu {
   border: 3px solid black;
   position: absolute;
@@ -111,6 +110,7 @@ body {
   cursor: pointer;
 }
 
+/* otayhteytta-sivun teksti */
 #otayhteytta {
   color: rgb(0, 0, 0);
   font-size: 20px;
@@ -120,7 +120,6 @@ body {
 }
 
 /* Yhteydenottolomake */
-
 form {
   max-width: 400px;
   margin: 20px auto;
@@ -204,7 +203,7 @@ button {
   display: none;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
+  z-index: 99;
 }
 
 .large-image {
@@ -214,7 +213,7 @@ button {
   position: fixed;
   top: 10%;
   left: 5%;
-  z-index: 10000;
+  z-index: 100;
   border: 2px solid black;
 }
 
@@ -222,31 +221,23 @@ button {
   display: none;
   /* Hide by default */
   justify-content: center;
-  /* Center content horizontally */
   align-items: center;
-  /* Center content vertically */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  /* Dark background */
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .image-description {
   color: rgb(182, 56, 255);
-  /* Text color */
   text-align: center;
-  /* Center text */
-  font-size: 30px;
+  font-size: 40px;
   font-family: "Poppins", sans-serif;
-  margin-top: 50%;
-  /* Space between image and text */
-  z-index: 10001;
-  /* Ensure it appears above the overlay */
-
+  margin-top: 400px;
+  z-index: 1100;
 }
 
 /* tabletti */
@@ -281,6 +272,15 @@ button {
   .gallery img {
     height: auto;
     max-width: 200px;
+  }
+
+  .image-description {
+    color: rgb(182, 56, 255);
+    text-align: center;
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+    margin-top: 100px;
+    z-index: 1100;
   }
 }
 
