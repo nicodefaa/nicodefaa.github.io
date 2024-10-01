@@ -236,9 +236,10 @@ button {
   text-align: center;
   font-size: 40px;
   font-family: "Poppins", sans-serif;
-  margin-top: 450px;
+  margin-top: 350px;
   z-index: 1100;
 }
+
 
 /* tabletti */
 @media only screen and (min-width: 499px) and (max-width: 1049px) {
@@ -320,6 +321,7 @@ button {
   }
 }
 
+
 /* desktop */
 @media only screen and (min-width: 1050px) {
   body {
@@ -400,6 +402,5 @@ button {
   text-align: center;
   font-size: 30px;
   font-family: "Poppins", sans-serif;
-  margin-top: 100px;
   z-index: 1100;
 }
