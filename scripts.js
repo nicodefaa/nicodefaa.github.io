@@ -71,6 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Attach swipe event listeners only when the image is open
         overlay.addEventListener("touchstart", handleTouchStart);
         overlay.addEventListener("touchmove", handleTouchMove);
+        // Keyboard keydown for arrow key navigation
+        document.addEventListener('keydown', handleKeyNavigation);
     }
 
     // Function to close the large image
@@ -82,6 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Remove swipe event listeners when the image is closed
         overlay.removeEventListener("touchstart", handleTouchStart);
         overlay.removeEventListener("touchmove", handleTouchMove);
+        // Keyboard key up for arrow key navigation
+        document.removeEventListener('keydown', handleKeyNavigation);
     }
 
     // Function to update image description
@@ -148,7 +152,19 @@ document.addEventListener('DOMContentLoaded', () => {
         currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
         openLargeImage(currentImageIndex);
     }
+
+    // Function to handle keyboard navigation
+    function handleKeyNavigation(event) {
+        if (overlay.style.display === 'flex') {
+            if (event.key === 'ArrowRight') {
+                showNextImage(); // Right arrow key
+            } else if (event.key === 'ArrowLeft') {
+                showPreviousImage(); // Left arrow key
+            }
+        }
+    }
 });
+
 
 
 // contact form script
