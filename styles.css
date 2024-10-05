@@ -241,8 +241,8 @@ button {
 }
 
 
-/* desktop */
-@media only screen and (min-width: 1050px) {
+/* desktop (vaihda max width 1050px :ksi jos enabloit tabletti-asetukset) */
+@media only screen and (min-width: 499px) {
   body {
     background-color: rgb(255, 255, 255);
   }
