@@ -298,7 +298,7 @@ button {
   object-fit: contain;
   position: fixed;
   top: 5%;
-  left: 30%;
+  left: 10%;
   z-index: 100;
   border: 2px solid black;
 }
