@@ -158,6 +158,18 @@ button {
   cursor: pointer;
 }
 
+.large-image {
+  max-width: 90%;  /* Adjust the width to make sure it fits well on both mobile and desktop */
+  max-height: 90%;
+  object-fit: contain;
+  position: fixed;
+  top: 10%;  /* Center vertically with a bit of margin */
+  left: 50%;  /* Move the image to the center horizontally */
+  transform: translate(-50%, 0);  /* Offset by half its width to ensure it's centered */
+  z-index: 100;
+  border: 2px solid black;
+}
+
 
 /* mobiili */
 @media only screen and (max-width: 498px) {
@@ -212,8 +224,7 @@ button {
   object-fit: contain;
   position: fixed;
   top: 10%;
-  left: 50%;  /* Move the image to the center horizontally */
-  transform: translate(-50%, 0);  /* Offset by half its width to ensure it's centered */
+  left: 50%;
   z-index: 100;
   border: 2px solid black;
 }
@@ -298,7 +309,7 @@ button {
   object-fit: contain;
   position: fixed;
   top: 5%;
-  left: 25%;
+  left: 50%;
   z-index: 100;
   border: 2px solid black;
 }
