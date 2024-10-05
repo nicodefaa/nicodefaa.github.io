@@ -212,7 +212,8 @@ button {
   object-fit: contain;
   position: fixed;
   top: 10%;
-  left: 5%;
+  left: 50%;  /* Move the image to the center horizontally */
+  transform: translate(-50%, 0);  /* Offset by half its width to ensure it's centered */
   z-index: 100;
   border: 2px solid black;
 }
