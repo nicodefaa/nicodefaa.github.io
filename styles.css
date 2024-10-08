@@ -11,7 +11,7 @@ h1 {
 }
 
 h1:hover {
-  color: rgb(0, 210, 255);
+  color: rgb(207, 85, 255);
   cursor: pointer;
   /* Change title text color and cursor type when mouseovering (header 1) */
 }
@@ -28,7 +28,7 @@ h3 {
 h4 {
   font-family: "Poppins", sans-serif;
   color: rgb(0, 0, 0);
-  position: fixed;
+  position: absolute;
   top: 15%;
   left: 5%;
 }
@@ -302,7 +302,7 @@ button {
   }
 
   .image-description {
-    color: rgb(182, 56, 255);
+    color: rgb(56, 136, 255);
     text-align: center;
     position: fixed;
     font-size: 36px;
@@ -330,10 +330,14 @@ button {
     background-color: rgb(255, 255, 255);
   }
 
+  h4 {
+    left: 30%;
+  }
+
   #OravaEtusivu {
-    width: 70%;
+    width: 40%;
     height: auto;
-    left: 15%;
+    left: 30%;
   }
 
   h1 {
@@ -359,7 +363,7 @@ button {
     position: fixed;
     font-size: 30px;
     font-family: "Poppins", sans-serif;
-    margin-top: 700px;
+    margin-top: 600px;
     z-index: 1100;
   }
 
