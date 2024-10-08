@@ -102,7 +102,7 @@ body {
 #OravaEtusivu {
   border: 3px solid black;
   position: absolute;
-  top: 35%;
+  top: 40%;
 }
 
 /* tietoja-sivun omakuvat */
@@ -119,8 +119,6 @@ body {
 .tietoja {
   overflow-x: hidden;
   overflow-y: hidden;
-  background-color: rgb(255, 255, 255);
-  /* Aina taustaväri, vaikka olisi valkoinen, koska käyttäjällä voi olla oma väriteema, jossa ei näy tekstit */
   text-align: center;
 }
 
@@ -232,9 +230,6 @@ button {
 
 /* mobiili */
 @media only screen and (max-width: 999px) {
-  body {
-    background-color: rgb(255, 255, 255);
-  }
 
   #OravaEtusivu {
     width: 60%;
@@ -326,9 +321,6 @@ button {
 
 /* desktop */
 @media only screen and (min-width: 1000px) {
-  body {
-    background-color: rgb(255, 255, 255);
-  }
 
   h4 {
     left: 30%;
@@ -367,14 +359,14 @@ button {
     z-index: 1100;
   }
 
-    /* tietoja-sivun gif */
-    #oravakadella {
-      position: center;
-      height: auto;
-      max-width: 50%;
-      margin-top: 320px;
-      border: 2px solid black;
-    }
+  /* tietoja-sivun gif */
+  #oravakadella {
+    position: center;
+    height: auto;
+    max-width: 50%;
+    margin-top: 320px;
+    border: 2px solid black;
+  }
 
 }
 
