@@ -38,6 +38,7 @@ p {
   color: rgb(0, 0, 0);
 }
 
+
 body {
   background-color: rgb(255, 255, 255);
   /* Aina taustaväri, vaikka olisi valkoinen, koska käyttäjällä voi olla oma väriteema, jossa ei näy tekstit */
@@ -327,7 +328,7 @@ button {
   }
 
   #OravaEtusivu {
-    width: 40%;
+    width: 30%;
     height: auto;
     left: 30%;
   }
@@ -371,3 +372,13 @@ button {
 }
 
 /* desktop-asetukset loppuvat tähän */
+
+/* darkmode nappi */ 
+#darkModeToggle {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  scale: 80%;
+  z-index: 2000;
+  background-color: rgb(18, 55, 79)
+}
