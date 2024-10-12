@@ -1,4 +1,5 @@
 /* logo/otsikko */
+
 h1 {
   font-family: "Poppins", sans-serif;
   color: rgb(150, 160, 255);
@@ -309,7 +310,7 @@ button {
 
   /* tietoja-sivun gif */
   #oravakadella {
-    position: center;
+    position: absolute;
     height: auto;
     max-width: 400px;
     margin-top: 320px;
@@ -362,7 +363,7 @@ button {
 
   /* tietoja-sivun gif */
   #oravakadella {
-    position: center;
+    position: absolute;
     height: auto;
     max-width: 50%;
     margin-top: 320px;
@@ -372,13 +373,3 @@ button {
 }
 
 /* desktop-asetukset loppuvat tähän */
-
-/* darkmode nappi */ 
-#darkModeToggle {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  scale: 80%;
-  z-index: 2000;
-  background-color: rgb(18, 55, 79)
-}
